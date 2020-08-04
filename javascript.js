@@ -1,6 +1,6 @@
 const choises = ["Rock", "Paper", "Scissors"]
-var playerCount = 0;
-var computerCount = 0;
+let playerCount = 0;
+let computerCount = 0;
 
 
 function computerPlay() {
@@ -42,11 +42,11 @@ function game(playerSelection, computerSelection) {
     function whosWin(n1, n2) {
         let message = document.getElementById("final");
         if (n1 > n2) {
-            message.innerHTML = "You are a WINNER <br>player ${n1} - computer ${n2} - tie ${5-n1-n2}";
+            message.innerHTML = 'You are a WINNER' <br> + 'player ' + n1 + '- computer ${n2} - tie ${5 - n1 - n2}';
         } else if (n1 < n2) {
-            message.innerHTML = "You are a LOSER <br>player ${n1} - computer ${n2} - tie ${5-n1-n2}";
+            message.innerHTML = 'You are a LOSER <br>player n1 - computer ${n2} - tie ${5 - n1 - n2}';
         } else {
-            message.innerHTML = "Ok, It's a tie <br>player ${n1} - computer ${n2} - tie ${5-n1-n2}";
+            message.innerHTML = 'Ok, It\'s a tie <br>player n1 - computer ${n2} - tie ${5 - n1 - n2}';
         }
     }
     
