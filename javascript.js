@@ -1,4 +1,4 @@
-const choises = ["rock", "paper", "scissors"]
+const choises = ["Rock", "Paper", "Scissors"]
 var playerCount = 0;
 var computerCount = 0;
 
@@ -6,8 +6,8 @@ var computerCount = 0;
 function computerPlay() {
     let pcchoise = choises[Math.floor(Math.random()*3)];
     return pcchoise;
-
-function capitalize(str){
+}
+function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     }
 
@@ -19,7 +19,7 @@ function game(playerSelection, computerSelection) {
             player == "Scissors" && computer == "Paper"
         )){
         playerCount++;
-        return 'You win! ${player} beats ${computer};
+        return 'You win! ${player} beats ${computer}';
         } else if (player == computer) {
             return "It's a tie";
         } else {
@@ -30,9 +30,9 @@ function game(playerSelection, computerSelection) {
 
     function letsplay() {
         let round = 0;
-        while (round <5) {
-            let playerSelection = promp("Pick one: Rock, Paper or Scissors");
-            const computerSelection = computerPlay;
+        while (round < 5) {
+            let playerSelection = prompt("Pick one: Rock, Paper or Scissors");
+            const computerSelection = computerPlay();
             console.log(game(playerSelection, computerSelection));
             round++;
         }
@@ -42,11 +42,11 @@ function game(playerSelection, computerSelection) {
     function whosWin(n1, n2) {
         let message = document.getElementById("final");
         if (n1 > n2) {
-            message.innerHTML = 'You are a WINNER <br> player ${n1} - computer ${n2} - tie ${5-n1-n2}';
+            message.innerHTML = "You are a WINNER <br>player ${n1} - computer ${n2} - tie ${5-n1-n2}";
         } else if (n1 < n2) {
-            MessageChannel.innerHTML = "You are a LOSER <br> player ${n1} - computer ${n2} - tie ${5-n1-n2}";
+            message.innerHTML = "You are a LOSER <br>player ${n1} - computer ${n2} - tie ${5-n1-n2}";
         } else {
-            MessageChannel.innerHTML = "Ok, It's a tie <br> player ${n1} - computer ${n2} - tie ${5-n1-n2}";
+            message.innerHTML = "Ok, It's a tie <br>player ${n1} - computer ${n2} - tie ${5-n1-n2}";
         }
     }
     
