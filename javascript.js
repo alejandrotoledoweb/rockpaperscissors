@@ -28,11 +28,25 @@ function game(playerSelection, computerSelection) {
         }
     } 
 
-    function game() {
-        
+    function letsplay() {
+        let round = 0;
+        while (round <5) {
+            let playerSelection = promp("Pick one: Rock, Paper or Scissors");
+            const computerSelection = computerPlay;
+            console.log(game(playerSelection, computerSelection));
+            round++;
+        }
+        whosWin(playerCount, computerCount);
     }
-    const playerSelection = 'rock';
-    const computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection))
 
-}
+    function whosWin(n1, n2) {
+        let message = document.getElementById("final");
+        if (n1 > n2) {
+            message.innerHTML = 'You are a WINNER <br> player ${n1} - computer ${n2} - tie ${5-n1-n2}';
+        } else if (n1 < n2) {
+            MessageChannel.innerHTML = "You are a LOSER <br> player ${n1} - computer ${n2} - tie ${5-n1-n2}";
+        } else {
+            MessageChannel.innerHTML = "Ok, It's a tie <br> player ${n1} - computer ${n2} - tie ${5-n1-n2}";
+        }
+    }
+    
